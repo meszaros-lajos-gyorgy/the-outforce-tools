@@ -1,0 +1,22 @@
+{
+  "name": "the-outforce-tools",
+  "version": "0.0.1",
+  "description": "tools for modding the pc game 'The Outforce'",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meszaros-lajos-gyorgy/the-outforce-tools.git"
+  },
+  "author": "Lajos Meszaros <m_lajos@hotmail.com>",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/meszaros-lajos-gyorgy/the-outforce-tools/issues"
+  },
+  "homepage": "https://github.com/meszaros-lajos-gyorgy/the-outforce-tools#readme"
+}
