@@ -22,6 +22,7 @@
   "homepage": "https://github.com/meszaros-lajos-gyorgy/the-outforce-tools#readme",
   "dependencies": {
     "nodemon": "^2.0.14",
-    "ramda": "^0.27.1"
+    "ramda": "^0.27.1",
+    "stringview": "^2.1.1"
   }
 }
