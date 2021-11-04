@@ -64,25 +64,29 @@ const getFolders = (files) => {
   )(files);
 };
 
-(async () => {
-  const boxname = "Music";
-  const files = await openBox(boxname);
-
-  // const outputDir = path.resolve(DEFAULT_INSTALL_DIR, "./unpacked/boxes/");
-  const outputDir = path.resolve("e:/the-outforce-boxes/");
-
+const saveToDisk = async (outputDir, files) => {
   const folders = getFolders(files);
 
   for (let folder of folders) {
-    await fs.promises.mkdir(path.resolve(outputDir, `${boxname}.box`, folder), {
+    await fs.promises.mkdir(path.resolve(outputDir, folder), {
       recursive: true,
     });
   }
 
   for (let file of files) {
-    await fs.promises.writeFile(
-      path.resolve(outputDir, `${boxname}.box`, file.path),
-      file.data
-    );
+    await fs.promises.writeFile(path.resolve(outputDir, file.path), file.data);
   }
+};
+
+(async () => {
+  const boxname = "Music";
+
+  const files = await openBox(boxname);
+
+  // const outputDir = path.resolve(DEFAULT_INSTALL_DIR, "./unpacked/boxes/", `${boxname}.box`);
+  const outputDir = path.resolve("e:/the-outforce-boxes/", `${boxname}.box`);
+
+  await saveToDisk(outputDir, files);
+
+  console.log("done");
 })();
